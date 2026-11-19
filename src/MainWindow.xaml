@@ -1,0 +1,44 @@
+<Window x:Class="GTA6ConsoleCompanion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="GTA 6 Console Performance Companion"
+        Height="600" Width="860"
+        Background="#121212"
+        Foreground="#E6E6E6"
+        FontFamily="Segoe UI"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed">
+
+    <Grid Margin="18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+
+        <TabControl x:Name="MainTabControl" Grid.Row="0">
+            <TabItem Header="Performance">
+                <ScrollViewer>
+                    <StackPanel Margin="4,4,4,4">
+                        <TextBlock Text="Performance" FontSize="22" FontWeight="Bold" Margin="0,0,0,12" />
+                        <TextBlock Text="Scene:" FontWeight="SemiBold" Margin="0,0,8,0" />
+                        <ComboBox x:Name="SceneComboBox" Width="180" Margin="0,0,0,12" />
+                        <TextBlock Text="Console:" FontWeight="SemiBold" Margin="0,0,8,0" />
+                        <ComboBox x:Name="ConsoleComboBox" Width="180" Margin="0,0,0,14" />
+                        <Button x:Name="GetRecommendationsButton" Content="Get recommendations" Width="200" Margin="0,0,0,10" Click="GetRecommendationsButton_Click" />
+                        <TextBlock x:Name="RecommendationsTextBlock" Text="Recommendations will appear here." TextWrapping="Wrap" />
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+            <TabItem Header="Stutter Log">
+                <StackPanel Margin="4,4,4,4">
+                    <TextBlock Text="Stutter Log" FontSize="22" FontWeight="Bold" Margin="0,0,0,12" />
+                    <DataGrid x:Name="StutterLogDataGrid" Height="360" IsReadOnly="True" Margin="0,0,0,12" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <TextBlock Grid.Row="1" Text="GTA 6 Console Performance Companion · read only" Margin="0,10,0,0" Opacity="0.6" />
+    </Grid>
+</Window>

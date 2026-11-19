@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>GTA6ConsoleCompanion</RootNamespace>
+    <AssemblyName>GTA6ConsoleCompanion</AssemblyName>
+    <Authors>GTA6Companion Contributors</Authors>
+    <Company>GTA6Companion Contributors</Company>
+    <Version>1.0.0</Version>
+    <Description>Read-only performance companion for the console version of GTA 6.</Description>
+  </PropertyGroup>
+
+</Project>
